@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e6b96123d6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./gallery.css">
+    <link rel="icon" href="./envira-brands-solid.svg">
+    <title>MY GALLERY</title>
+</head>
+<body>
+    <div class="container">
+        <div class="img-container">
+            <div class="image"><img class="pic1" src="./img1.jpeg" ></div>
+            <div class="image"><img class="pic1" src="./img2.avif" alt=""></div>
+            <div class="image"><img class="pic1" src="./img3.jpg"  alt=""></div>
+            <div class="image"><img class="pic1" src="./img4.jpg" alt=""  ></div>
+            <div class="image"><img class="pic1" src="./img6.jpeg" alt=""  ></div>
+            <div class="image"><img class="pic1" src="./img7.jpeg" alt=""  ></div>
+
+        </div>
+
+        <div class="pop_image">
+            <span onclick="close();">&times;</span>
+            <img class="topPic" src="./img1.jpeg"  alt=""  >
+        </div>
+
+    </div>
+    
+</body>
+
+<script>
+    let aryOfPic = document.querySelectorAll(".pic1");
+   aryOfPic.forEach(img =>{
+    img.onclick = () =>{
+        document.querySelector(".pop_image").style.display = "block";
+        document.querySelector(".topPic").src = img.getAttribute('src');
+    }
+   });
+
+document.querySelector(".pop_image span").onclick = () =>{
+    document.querySelector(".pop_image").style.display = "none";
+
+}
+   
+</script>
+</html>
